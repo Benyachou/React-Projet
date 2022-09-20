@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import Car from './Cars';
 
 class Mycars extends Component {
-
+    
     render(){
-
-        console.log(this);
+ 
 
         return (
 
             <div>
-                <h1> {this.props.title} </h1>
+                <div className="title">
+                    <h1> {this.props.title} </h1>
+                </div>
+
                <Car color = "red">Ford</Car>
                <Car>Toyota</Car>
                <Car color = "vert"></Car>
