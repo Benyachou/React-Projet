@@ -1,3 +1,5 @@
+import Wrapper from "./Wrapper";
+
 const Car = ({children, color}) => {
 
     let colorInfo = "";
@@ -10,10 +12,11 @@ const Car = ({children, color}) => {
 
  
     return   children && (
-        <div className="cars">
+        
+        <Wrapper>
             <p>Marque: {children}</p>
             <p>Couleur: {colorInfo}</p>
-        </div>
+        </Wrapper>
     )
     
 

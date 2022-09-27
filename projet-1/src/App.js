@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Mycars from './components/Mycars';
+import Container from './components/Mycars';
 
 import './App.css';
 
@@ -11,17 +11,18 @@ class App extends Component {
   }
 
   render() {
-    
       return (
+
       <div className="App">
 
-      <Mycars 
+      <Container 
         color= {this.state.color}
         title = {this.state.titre}
       />
 
+      <button>Changer le nom en dur</button>
       </div>
-      );
+    );
   }
 }
 

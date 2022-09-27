@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:rgb(64, 60, 90);
 }
 
 code {
@@ -13,12 +14,17 @@ code {
 }
 
 .cars {
-background-color: pink;
 width: 400px;
 padding: 10px;
 margin: 5px auto;
+background: linear-gradient(45deg, rgb(176, 178, 227), rgb(167, 229, 206));
 }
 
 .title {
   color: green;
+}
+
+h1.styled {
+  color: red;
+  text-transform: uppercase;
 }
