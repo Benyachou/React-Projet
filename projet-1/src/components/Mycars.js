@@ -17,9 +17,9 @@ class Mycars extends Component {
             <div>
                 <h1>{this.props.title}</h1>
                     
-                <Car color={this.state.voitures[0].color}> {this.state.voitures[0].name} </Car>
-                <Car color={this.state.voitures[1].color}> {this.state.voitures[1].name} </Car>
-                <Car color={this.state.voitures[2].color}> {this.state.voitures[2].name} </Car>
+                <Car color={this.state.voitures[0].color} year={this.state.voitures[0].year} > {this.state.voitures[0].name} </Car>
+                <Car color={this.state.voitures[1].color} year={this.state.voitures[1].year}> {this.state.voitures[1].name} </Car>
+                <Car color={this.state.voitures[2].color} year={this.state.voitures[2].year}> {this.state.voitures[2].name} </Car>
             </div>
            
         )
