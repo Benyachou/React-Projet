@@ -1,47 +1,29 @@
-import React, { Component } from "react";
-import Car from './Cars';
-import Wrapper from "./Wrapper";
-import MyHeader from "./MyHeader";
+import { Component } from 'react'
+import Car from './Cars'
+
 class Mycars extends Component {
 
     state = {
-        cars : ['Toyota', "Renault", "Ford"]
-    }
-    
-    noCopy = () => {
-        alert("Merci de ne pas copier le texte");
-    }
-
-    addStyle = (e) => {
-
-        if (e.target.classList.contains("styled")) {
-            e.target.classList.remove("styled");
-        } else {
-            e.target.classList.add("styled");
-        }
+        voitures: [
+            {name: 'Ford', color: 'Rouge', year: 2000},
+            {name: 'Toyota', color: 'Noir', year: 2010},
+            {name: 'Renault', color: 'Blanc', year: 2014},
+        ]
     }
 
-    render(){
+
+    render() {
         return (
-
             <div>
-                <Wrapper>
-                    <MyHeader>
-                        <h1 onMouseOver = {this.addStyle}>
-                            {this.props.title}
-                        </h1>
-                    </MyHeader>
-                </Wrapper>
-
-                <p onCopy={this.noCopy}>Lorem ipsum dolor sit amet.</p>
-
-               <Car color = "red"> {this.state.cars[0]} </Car>
-               <Car> {this.state.cars[1]} </Car>
-               <Car color = "vert"> {this.state.cars[2]} </Car>
-
+                <h1>{this.props.title}</h1>
+                    
+                <Car color={this.state.voitures[0].color}> {this.state.voitures[0].name} </Car>
+                <Car color={this.state.voitures[1].color}> {this.state.voitures[1].name} </Car>
+                <Car color={this.state.voitures[2].color}> {this.state.voitures[2].name} </Car>
             </div>
+           
         )
     }
 }
 
-export default Mycars;
+export default Mycars
